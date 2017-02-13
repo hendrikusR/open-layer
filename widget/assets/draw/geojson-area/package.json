@@ -1,0 +1,202 @@
+{
+  "_args": [
+    [
+      "geojson-area@^0.2.0",
+      "/home/apank/webapp/geoportal/web/node_modules/turf-area"
+    ]
+  ],
+  "_from": "geojson-area@>=0.2.0 <0.3.0",
+  "_id": "geojson-area@0.2.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/geojson-area",
+  "_nodeVersion": "0.10.39",
+  "_npmUser": {
+    "email": "tom@macwright.org",
+    "name": "tmcw"
+  },
+  "_npmVersion": "3.3.9",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "geojson-area",
+    "raw": "geojson-area@^0.2.0",
+    "rawSpec": "^0.2.0",
+    "scope": null,
+    "spec": ">=0.2.0 <0.3.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/turf-area"
+  ],
+  "_resolved": "https://registry.npmjs.org/geojson-area/-/geojson-area-0.2.1.tgz",
+  "_shasum": "2537b0982db86309f21d2c428a4257c7a6282cc6",
+  "_shrinkwrap": null,
+  "_spec": "geojson-area@^0.2.0",
+  "_where": "/home/apank/webapp/geoportal/web/node_modules/turf-area",
+  "author": {
+    "name": "Tom MacWright"
+  },
+  "bugs": {
+    "url": "https://github.com/mapbox/geojson-area/issues"
+  },
+  "dependencies": {
+    "wgs84": "0.0.0"
+  },
+  "description": "calculate the physical area of a geojson geometry",
+  "devDependencies": {
+    "tape": "^3.0.3"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dist": {
+    "shasum": "2537b0982db86309f21d2c428a4257c7a6282cc6",
+    "tarball": "https://registry.npmjs.org/geojson-area/-/geojson-area-0.2.1.tgz"
+  },
+  "gitHead": "e5f0b7d6e1282d8ba22885a527234e80192acc0b",
+  "homepage": "https://github.com/mapbox/geojson-area#readme",
+  "keywords": [
+    "geojson",
+    "area",
+    "geodesy"
+  ],
+  "license": "BSD-2-Clause",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "email": "tom@macwright.org",
+      "name": "tmcw"
+    },
+    {
+      "email": "eden@mapbox.com",
+      "name": "edenh"
+    },
+    {
+      "email": "sean@mapbox.com",
+      "name": "sgillies"
+    },
+    {
+      "email": "lauren@mapbox.com",
+      "name": "lbud"
+    },
+    {
+      "email": "bobby@mapbox.com",
+      "name": "bsudekum"
+    },
+    {
+      "email": "damon@mapbox.com",
+      "name": "dnomadb"
+    },
+    {
+      "email": "ian.villeda@gmail.com",
+      "name": "ian29"
+    },
+    {
+      "email": "duncan@mapbox.com",
+      "name": "dvncan"
+    },
+    {
+      "email": "nicki@mapbox.com",
+      "name": "nickidlugash"
+    },
+    {
+      "email": "saman@mapbox.com",
+      "name": "samanbb"
+    },
+    {
+      "email": "aj.ashton@gmail.com",
+      "name": "ajashton"
+    },
+    {
+      "email": "alex@developmentseed.org",
+      "name": "lxbarth"
+    },
+    {
+      "email": "michael.patrick.morris@gmail.com",
+      "name": "mikemorris"
+    },
+    {
+      "email": "ian@mapbox.com",
+      "name": "ianshward"
+    },
+    {
+      "email": "agafonkin@gmail.com",
+      "name": "mourner"
+    },
+    {
+      "email": "tristen.brown@gmail.com",
+      "name": "tristen"
+    },
+    {
+      "email": "nicholas.ingalls@gmail.com",
+      "name": "ingalls"
+    },
+    {
+      "email": "ansis.brammanis@gmail.com",
+      "name": "ansis"
+    },
+    {
+      "email": "john.firebaugh@gmail.com",
+      "name": "jfirebaugh"
+    },
+    {
+      "email": "jeff@miccolis.net",
+      "name": "miccolis"
+    },
+    {
+      "email": "carol@mapbox.com",
+      "name": "gretacb"
+    },
+    {
+      "email": "aaronlidman@gmail.com",
+      "name": "aaronlidman"
+    },
+    {
+      "email": "morgan.herlocker@gmail.com",
+      "name": "morganherlocker"
+    },
+    {
+      "email": "camille@mapbox.com",
+      "name": "camilleanne"
+    },
+    {
+      "email": "ryan.clark.j@gmail.com",
+      "name": "rclark"
+    },
+    {
+      "email": "accounts@mapbox.com",
+      "name": "mapbox"
+    },
+    {
+      "email": "will@mapbox.com",
+      "name": "willwhite"
+    },
+    {
+      "email": "dane@mapbox.com",
+      "name": "springmeyer"
+    },
+    {
+      "email": "kkaefer@gmail.com",
+      "name": "kkaefer"
+    },
+    {
+      "email": "dthompson@gmail.com",
+      "name": "dthompson"
+    },
+    {
+      "email": "young@developmentseed.org",
+      "name": "yhahn"
+    }
+  ],
+  "name": "geojson-area",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mapbox/geojson-area.git"
+  },
+  "scripts": {
+    "test": "tape test/basic.js"
+  },
+  "version": "0.2.1"
+}

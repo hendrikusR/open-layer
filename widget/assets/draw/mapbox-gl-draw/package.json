@@ -1,0 +1,302 @@
+{
+  "_args": [
+    [
+      "mapbox-gl-draw",
+      "/home/apank/webapp/geoportal/web"
+    ]
+  ],
+  "_from": "mapbox-gl-draw@latest",
+  "_id": "mapbox-gl-draw@0.7.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/mapbox-gl-draw",
+  "_nodeVersion": "4.2.2",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/mapbox-gl-draw-0.7.0.tgz_1464810832755_0.32055046944878995"
+  },
+  "_npmUser": {
+    "email": "mcwhittemore@gmail.com",
+    "name": "mcwhittemore"
+  },
+  "_npmVersion": "2.15.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "mapbox-gl-draw",
+    "raw": "mapbox-gl-draw",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/mapbox-gl-draw/-/mapbox-gl-draw-0.7.0.tgz",
+  "_shasum": "025ad9532ec287fc6acb6037a32b8e01973e86bf",
+  "_shrinkwrap": null,
+  "_spec": "mapbox-gl-draw",
+  "_where": "/home/apank/webapp/geoportal/web",
+  "author": {
+    "name": "mapbox"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/mapbox/mapbox-gl-draw/issues"
+  },
+  "dependencies": {
+    "geojsonhint": "^1.2.0",
+    "hat": "0.0.3",
+    "point-geometry": "0.0.0",
+    "ramda": "^0.17.1",
+    "turf-area": "^1.1.1"
+  },
+  "description": "A drawing component for Mapbox GL JS",
+  "devDependencies": {
+    "babel-eslint": "4.1.7",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-register": "^6.5.2",
+    "babelify": "^7.2.0",
+    "bistre": "^1.0.1",
+    "browserify": "^13.0.0",
+    "browserify-middleware": "^7.0.0",
+    "budo": "^4.0.0",
+    "envify": "^3.4.0",
+    "eslint": "^0.21.2",
+    "express": "^4.13.4",
+    "geojson-validation": "^0.1.6",
+    "mapbox-gl": "^0.18.0",
+    "mapbox-gl-js-mock": "^0.19.0",
+    "mock-browser": "^0.92.10",
+    "tape": "^4.0.0",
+    "uglify-js": "^2.4.23",
+    "unassertify": "^2.0.3"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "025ad9532ec287fc6acb6037a32b8e01973e86bf",
+    "tarball": "https://registry.npmjs.org/mapbox-gl-draw/-/mapbox-gl-draw-0.7.0.tgz"
+  },
+  "gitHead": "8d9a47aabd10d9e546e7bbf45f4b50d7b0482bad",
+  "homepage": "https://github.com/mapbox/mapbox-gl-draw",
+  "keywords": [
+    "webgl",
+    "mapbox",
+    "draw",
+    "drawing"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "email": "mxn@1ec5.org",
+      "name": "1ec5"
+    },
+    {
+      "email": "aaronlidman@gmail.com",
+      "name": "aaronlidman"
+    },
+    {
+      "email": "aj.ashton@gmail.com",
+      "name": "ajashton"
+    },
+    {
+      "email": "ansis.brammanis@gmail.com",
+      "name": "ansis"
+    },
+    {
+      "email": "andrew@mapbox.com",
+      "name": "apendleton"
+    },
+    {
+      "email": "wb@bergwerk-gis.at",
+      "name": "bergwerkgis"
+    },
+    {
+      "email": "bryan@mapbox.com",
+      "name": "bhousel"
+    },
+    {
+      "email": "bobby@mapbox.com",
+      "name": "bsudekum"
+    },
+    {
+      "email": "camille@mapbox.com",
+      "name": "camilleanne"
+    },
+    {
+      "email": "damon@mapbox.com",
+      "name": "dnomadb"
+    },
+    {
+      "email": "dthompson@gmail.com",
+      "name": "dthompson"
+    },
+    {
+      "email": "emily@mapbox.com",
+      "name": "emilymcafee"
+    },
+    {
+      "email": "flippmoke@gmail.com",
+      "name": "flippmoke"
+    },
+    {
+      "email": "spam@freenerd.de",
+      "name": "freenerd"
+    },
+    {
+      "email": "carol@mapbox.com",
+      "name": "gretacb"
+    },
+    {
+      "email": "ian.villeda@gmail.com",
+      "name": "ian29"
+    },
+    {
+      "email": "ian@mapbox.com",
+      "name": "ianshward"
+    },
+    {
+      "email": "nicholas.ingalls@gmail.com",
+      "name": "ingalls"
+    },
+    {
+      "email": "john.firebaugh@gmail.com",
+      "name": "jfirebaugh"
+    },
+    {
+      "email": "jake@jakepruitt.com",
+      "name": "jrpruit1"
+    },
+    {
+      "email": "karen@mapbox.com",
+      "name": "karenzshea"
+    },
+    {
+      "email": "kelvinabrokwa@gmail.com",
+      "name": "kelvinabrokwa"
+    },
+    {
+      "email": "kkaefer@gmail.com",
+      "name": "kkaefer"
+    },
+    {
+      "email": "lauren@mapbox.com",
+      "name": "lbud"
+    },
+    {
+      "email": "lucas@lucaswoj.com",
+      "name": "lucaswoj"
+    },
+    {
+      "email": "alex@mapbox.com",
+      "name": "lxbarth"
+    },
+    {
+      "email": "lyzi@mapbox.com",
+      "name": "lyzidiamond"
+    },
+    {
+      "email": "accounts@mapbox.com",
+      "name": "mapbox-admin"
+    },
+    {
+      "email": "matt@mapbox.com",
+      "name": "mateov"
+    },
+    {
+      "email": "mcwhittemore@gmail.com",
+      "name": "mcwhittemore"
+    },
+    {
+      "email": "jeff@miccolis.net",
+      "name": "miccolis"
+    },
+    {
+      "email": "michael.patrick.morris@gmail.com",
+      "name": "mikemorris"
+    },
+    {
+      "email": "morgan.herlocker@gmail.com",
+      "name": "morganherlocker"
+    },
+    {
+      "email": "agafonkin@gmail.com",
+      "name": "mourner"
+    },
+    {
+      "email": "irwin@mapbox.com",
+      "name": "mtirwin"
+    },
+    {
+      "email": "nicki@mapbox.com",
+      "name": "nickidlugash"
+    },
+    {
+      "email": "ryan.clark.j@gmail.com",
+      "name": "rclark"
+    },
+    {
+      "email": "saman@mapbox.com",
+      "name": "samanbb"
+    },
+    {
+      "email": "tlee@mapbox.com",
+      "name": "sbma44"
+    },
+    {
+      "email": "scothis@gmail.com",
+      "name": "scothis"
+    },
+    {
+      "email": "sean@mapbox.com",
+      "name": "sgillies"
+    },
+    {
+      "email": "dane@mapbox.com",
+      "name": "springmeyer"
+    },
+    {
+      "email": "patrick@mapbox.com",
+      "name": "themarex"
+    },
+    {
+      "email": "tom@macwright.org",
+      "name": "tmcw"
+    },
+    {
+      "email": "tristen.brown@gmail.com",
+      "name": "tristen"
+    },
+    {
+      "email": "will@mapbox.com",
+      "name": "willwhite"
+    },
+    {
+      "email": "young@mapbox.com",
+      "name": "yhahn"
+    }
+  ],
+  "name": "mapbox-gl-draw",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "mapbox-gl": "^0.19.0 || ^0.18.0 || ^0.17.0"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mapbox/mapbox-gl-draw.git"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production browserify index.js > dist/mapbox-gl-draw.js",
+    "lint": "eslint --no-eslintrc -c .eslintrc index.js src",
+    "prepublish": "NODE_ENV=production browserify index.js | uglifyjs -c -m > dist/mapbox-gl-draw.js",
+    "start": "node server.js",
+    "test": "npm run lint && tape -r ./test/mock-browser.js -r babel-register test/*.test.js"
+  },
+  "version": "0.7.0"
+}
