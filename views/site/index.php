@@ -35,6 +35,7 @@ $script = "
 
     var styles = {
         'Point': new ol.style.Style({
+            image: image,
 
         })
     };
@@ -49,7 +50,7 @@ $script = "
         'crs': {
             'type': 'name',
             'properties': {
-                'name': 'EPSG:3857'
+                'name': 'EPSG:4326'
             }
         },
         'features': [
@@ -59,8 +60,7 @@ $script = "
                 'geometry': {
                     'type': 'Point',
                     'coordinates': [
-                        106.8310546875,
-                        -6.18424616128059
+                     4e6,-2e6
                     ]
                 }
             }
@@ -90,20 +90,7 @@ $script = "
         preset : ['all']
     }));
 
-    map = new ol.Map({
-
-        layers: [
-            new ol.layer.Tile({
-                source: new ol.source.OSM()
-            }),
-            vectorLayer
-        ],
-        view: new ol.View({
-            projection: ol.proj.get('EPSG:3857'),
-            center: ol.proj.transform([117, -2], 'EPSG:4326', 'EPSG:3857'),
-            zoom: 4,
-        })
-    });
+    map.addLayer(vectorLayer);
 
 
 
