@@ -29,18 +29,16 @@ $script = "
     var image = new ol.style.Circle({
         radius: 5,
         fill: null,
-        stroke: new ol.style.Stroke({color: 'red', width: 1})
+        stroke: new ol.style.Stroke({color: 'red', width: 10})
     });
+
 
     var styles = {
         'Point': new ol.style.Style({
-            image: image,
-            stroke: new ol.style.Stroke({
-                color: 'green',
-                width: 1
-            })
+
         })
     };
+
 
     var styleFunction = function(feature) {
         return styles[feature.getGeometry().getType()];
@@ -54,13 +52,19 @@ $script = "
                 'name': 'EPSG:3857'
             }
         },
-        'features': [{
-            'type': 'Feature',
-            'geometry': {
-                'type': 'Point',
-                'coordinates': [106.8310546875, -6.18424616128059]
+        'features': [
+            {
+                'type': 'Feature',
+                'properties': {},
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [
+                        106.8310546875,
+                        -6.18424616128059
+                    ]
+                }
             }
-        }]
+        ]
     };
 
     var vectorSource = new ol.source.Vector({
@@ -94,15 +98,6 @@ $script = "
             }),
             vectorLayer
         ],
-        controls: ol.control.defaults({
-            attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
-                collapsible: false
-            })
-        }),
-        view: new ol.View({
-            center: [0, 0],
-            zoom: 2
-        }),
         view: new ol.View({
             projection: ol.proj.get('EPSG:3857'),
             center: ol.proj.transform([117, -2], 'EPSG:4326', 'EPSG:3857'),
