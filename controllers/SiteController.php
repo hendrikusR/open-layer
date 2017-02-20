@@ -8,7 +8,8 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
-
+use app\models\Multipoint;
+use app\models\Provinsi;
 class SiteController extends Controller
 {
     /**
@@ -33,6 +34,10 @@ class SiteController extends Controller
                 'actions' => [
                     'logout' => ['post'],
                 ],
+            ],
+            [
+                'class' => 'yii\filters\HttpCache',
+                    'only' => ['index'],
             ],
         ];
     }
@@ -60,7 +65,18 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        //$data_shp = Yii::$app->db->createCommand('SELECT ST_ASGEOJSON(ST_Transform(ST_SetSRID(the_geom, 4326), 3857)) AS linestring FROM linestring')->queryAll();
+        $data_shp = Yii::$app->db->createCommand('SELECT ST_AsText(ST_Simplify(ST_Transform(ST_SetSRID(the_geom,4326), 3857),0.005)) AS wkt FROM provinsi')->queryAll();
+
+
+        $data_replace = str_replace('"',"'", $data_shp[0]['wkt']);
+/*
+        print_r($data_replace);
+        die();
+*/
+        return $this->render('index',[
+            'data_replace' => $data_replace,
+        ]);
     }
 
     /**
@@ -93,6 +109,13 @@ class SiteController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+
+    public function actionShp()
+    {
+
+
+
     }
 
     /**

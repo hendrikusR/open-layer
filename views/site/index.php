@@ -26,61 +26,28 @@ $this->title = 'My Yii Application';
 <?php
 $script = "
 
-    var image = new ol.style.Circle({
-        radius: 5,
-        fill: null,
-        stroke: new ol.style.Stroke({color: 'red', width: 10})
+
+    var raster = new ol.layer.Tile({
+        source: new ol.source.OSM()
     });
 
+    var wkt = '$data_replace';
 
-    var styles = {
-        'Point': new ol.style.Style({
-            image: image,
+    console.log(wkt);
+    var format = new ol.format.WKT();
 
+    var feature = format.readFeature(wkt, {
+        dataProjection: 'EPSG:4326',
+        featureProjection: 'EPSG:3857'
+    });
+
+    var vector = new ol.layer.Vector({
+        source: new ol.source.Vector({
+            features: [feature]
         })
-    };
-
-
-    var styleFunction = function(feature) {
-        return styles[feature.getGeometry().getType()];
-    };
-
-    var geojsonObject = {
-        'type': 'FeatureCollection',
-        'crs': {
-            'type': 'name',
-            'properties': {
-                'name': 'EPSG:4326'
-            }
-        },
-        'features': [
-            {
-                'type': 'Feature',
-                'properties': {},
-                'geometry': {
-                    'type': 'Point',
-                    'coordinates': [
-                     4e6,-2e6
-                    ]
-                }
-            }
-        ]
-    };
-
-    var vectorSource = new ol.source.Vector({
-        features: (new ol.format.GeoJSON()).readFeatures(geojsonObject)
     });
-
-    vectorSource.addFeature(new ol.Feature(new ol.geom.Circle([5e6, 7e6], 1e6)));
-
-    var vectorLayer = new ol.layer.Vector({
-        source: vectorSource,
-        style: styleFunction
-    });
-
 
     var view = map.getView();
-
 
     map.addControl(new bukapeta.ol.BasemapProvider({
         default : ['mapbox','streets-basic'],
@@ -90,7 +57,7 @@ $script = "
         preset : ['all']
     }));
 
-    map.addLayer(vectorLayer);
+    map.addLayer(vector);
 
 
 
