@@ -72,7 +72,7 @@ class SiteController extends Controller
 
     public function actionPeta()
     {
-        $data_shp = Yii::$app->db->createCommand('SELECT ST_AsText(ST_Simplify(ST_Transform(ST_SetSRID(the_geom,4326), 3857),0.005)) AS wkt FROM provinsi where kode_provinsi::integer = 31')->queryAll();
+        $data_shp = Yii::$app->db->createCommand('SELECT ST_AsText(ST_Simplify(ST_Transform(ST_SetSRID(the_geom,4326), 3857),0.005)) AS wkt FROM provinsi')->queryAll();
 
         return json_encode($data_shp);
     }
