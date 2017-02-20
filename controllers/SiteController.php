@@ -65,18 +65,16 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        //$data_shp = Yii::$app->db->createCommand('SELECT ST_ASGEOJSON(ST_Transform(ST_SetSRID(the_geom, 4326), 3857)) AS linestring FROM linestring')->queryAll();
-        $data_shp = Yii::$app->db->createCommand('SELECT ST_AsText(ST_Simplify(ST_Transform(ST_SetSRID(the_geom,4326), 3857),0.005)) AS wkt FROM provinsi')->queryAll();
+        return $this->render('index');
+    }
 
+   
 
-        $data_replace = str_replace('"',"'", $data_shp[0]['wkt']);
-/*
-        print_r($data_replace);
-        die();
-*/
-        return $this->render('index',[
-            'data_replace' => $data_replace,
-        ]);
+    public function actionPeta()
+    {
+        $data_shp = Yii::$app->db->createCommand('SELECT ST_AsText(ST_Simplify(ST_Transform(ST_SetSRID(the_geom,4326), 3857),0.005)) AS wkt FROM provinsi where kode_provinsi::integer = 31')->queryAll();
+
+        return json_encode($data_shp);
     }
 
     /**

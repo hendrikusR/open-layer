@@ -12,7 +12,15 @@ $config = [
             'cookieValidationKey' => 'rPS4l_QsBDplAkKwo6B9IGTJmVLuw0bz',
         ],
         'cache' => [
-            'class' => 'yii\caching\FileCache',
+            /* 'class' => 'yii\caching\FileCache', */
+            'class' => 'yii\caching\MemCache',
+            'servers' => [
+                [
+                    'host' => 'localhost', // sesuaikan dengan server kamu
+                    'port' => 11211, // default port
+                    'weight' => 100, // saya gagal faham disini
+                ],
+            ], 
         ],
         'user' => [
             'identityClass' => 'app\models\User',
